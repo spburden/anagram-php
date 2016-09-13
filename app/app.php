@@ -7,6 +7,8 @@
     if (empty($_SESSION['collection'])) {
         $_SESSION['collection'] = array();
     }
+    use Symfony\Component\Debug\Debug;
+    Debug::enable();
 
     $app = new Silex\Application();
 

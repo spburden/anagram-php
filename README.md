@@ -2,7 +2,7 @@
 
 #### _Anagram identifier application, 8-12-16_
 
-#### By _**Martin Cartledge**_
+#### By _**Martin Cartledge &amp; Stephen Burden**_
 
 ## Description
 
@@ -12,9 +12,8 @@ _This app will identify anagrams of the user input._
 
 | Behavior          | Input         | Output|
 | ------------- |-------------| -----|
-| Behavior 1 | Input 1 | Output 1 |
-| Behavior 2 | Input 2 | Output 2 |
-| Behavior 3 | Input 3 | Output 3 |
+| Uses input to return list of possible anagrams | dog | dgo<br>gdo<br>god<br>odg<br>ogd |
+| Determines which combinations are anagrams | dog | god |
 
 
 ## Setup/Installation Requirements
@@ -55,4 +54,4 @@ Twig_
 
 *This webpage is licensed under the MIT license.*
 
-Copyright (c) 2016 **_Martin Cartledge_**
+Copyright (c) 2016 **_Martin Cartledge &amp; Stephen Burden_**
