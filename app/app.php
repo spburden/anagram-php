@@ -4,9 +4,7 @@
     require_once __DIR__."/../src/template.php";
 
     session_start();
-    if (empty($_SESSION['collection'])) {
-        $_SESSION['collection'] = array();
-    }
+
     use Symfony\Component\Debug\Debug;
     Debug::enable();
 
@@ -18,15 +16,13 @@
     'twig.path' => __DIR__.'/../views'
     ));
 
-  //loads actual twig file
+
     $app->get("/", function() use ($app) {
-      return $app['twig']->render("home.html.twig");
+        $new_anagram = new Anagram;
+        $result = $new_anagram->anagramTest($_GET['word1'], $_GET['word2']);
+        return $app['twig']->render("home.html.twig", array('result' => $result));
     });
 
-  //loads basic php
-    $app->get("/test", function() use ($app) {
-      return 'test variables here';
-    });
 
     return $app;
 ?>

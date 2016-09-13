@@ -21,22 +21,22 @@
         {
             // Assemble
             $test_multipleWords = new Anagram;
-            $word1 = "acre";
-            $words = "care race";
+            $word1 = "beardly";
+            $words = "jump beard race";
 
             // Act
             $result = $test_multipleWords->multipleWords($word1, $words);
 
             // Assert
-            $this->assertEquals(true, $result);
+            $this->assertEquals(['beard'], $result);
         }
 
         function test_partialWords()
         {
             // Assemble
             $test_partialWords = new Anagram;
-            $word1 = "beard";
-            $word2 = "beardly";
+            $word1 = "beardly";
+            $word2 = "beard";
 
             // Act
             $result = $test_partialWords->partialWords($word1, $word2);
