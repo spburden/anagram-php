@@ -4,7 +4,13 @@
     <title>Template</title>
   </head>
   <body>
-      <p>hi</p>
-      <a href="/test"><button type="submit" name="button">Tester</button></a>
+      <form class="form-control" action="/results" method="get">
+          <h2>Anagram Test</h2>
+          <label for="input1">Enter a word in lowercase</label>
+          <input type="text" name="input1" value="">
+          <label for="input2">Enter another word or words seperated by spaces (all in lowercase)</label>
+          <input type="text" name="input2" value="">
+          <button type="submit" name="button">Submit</button>
+      </form>
   </body>
 </html>

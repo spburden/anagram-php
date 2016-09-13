@@ -45,7 +45,4 @@
             $this->assertEquals(true, $result);
         }
     }
-
-
-
 ?>
