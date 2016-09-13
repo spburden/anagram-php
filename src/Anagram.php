@@ -1,7 +1,6 @@
 <?php
     class Anagram
     {
-
         function compareWords($word1, $word2)
         {
             $characters1 = str_split($word1);
@@ -14,7 +13,6 @@
                 return false;
             }
         }
-
         function multipleWords($word1, $words)
         {
             $characters1 = str_split($word1);
@@ -35,8 +33,18 @@
             } else {
                 return false;
             }
-
         }
 
+        function partialWords($word1, $word2) {
+            $characters1 = str_split($word1);
+            $characters2 = str_split($word2);
+            $partialTest = array_intersect($characters1, $characters2);
+            $partialTest2 = array_intersect($characters2, $characters1);
+            if ($partialTest == $characters2 || $partialTest2 == $characters1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 ?>

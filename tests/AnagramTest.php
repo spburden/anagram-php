@@ -30,6 +30,20 @@
             // Assert
             $this->assertEquals(true, $result);
         }
+
+        function test_partialWords()
+        {
+            // Assemble
+            $test_partialWords = new Anagram;
+            $word1 = "beard";
+            $word2 = "beardly";
+
+            // Act
+            $result = $test_partialWords->partialWords($word1, $word2);
+
+            // Assert
+            $this->assertEquals(true, $result);
+        }
     }
 
 
