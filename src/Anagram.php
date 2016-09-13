@@ -1,18 +1,42 @@
 <?php
     class Anagram
     {
-      private //property 1 here;
-      private //property 2 here;
-      private //property 3 here;
 
-        function __construct($property1, $property2, $property3)
+        function compareWords($word1, $word2)
         {
-            $this->... = $property1;
-            $this->... = $property2;
-            $this->... = $property3;
+            $characters1 = str_split($word1);
+            $characters2 = str_split($word2);
+            sort($characters1);
+            sort($characters2);
+            if ($characters1 == $characters2) {
+                return true;
+            } else {
+                return false;
+            }
         }
 
-        function
-        
+        function multipleWords($word1, $words)
+        {
+            $characters1 = str_split($word1);
+            sort($characters1);
+            $wordsArray = explode(" ", $words);
+            $equals = 0;
+            for ($i=0; $i < sizeof($wordsArray) ; $i++) {
+                $compare = str_split($wordsArray[$i]);
+                sort($compare);
+                if ($characters1 == $compare) {
+                    $equals += 1;
+                } else {
+                    $equals += 0;
+                }
+            }
+            if ($equals == sizeof($wordsArray)) {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+
     }
 ?>
